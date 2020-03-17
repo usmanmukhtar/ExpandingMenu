@@ -330,15 +330,15 @@ open class ExpandingMenuButton: UIView, UIGestureRecognizerDelegate {
     }
     
     fileprivate func resizeToFoldedFrame(completion: (() -> Void)?) {
-        if self.foldingAnimations.contains(.menuButtonRotate) == true {
-            UIView.animate(withDuration: 0.0618 * 3, delay: 0.0618 * 2, options: .curveEaseIn, animations: { () -> Void in
-                self.menuButton.transform = CGAffineTransform(rotationAngle: 0.0)
-                self.menuButton.setImage(self.menuButtonImage, for: .normal)
-                self.menuButton.setImage(self.menuButtonHighlightedImage, for: .highlighted)
-                }, completion: nil)
-        } else {
-            self.menuButton.transform = CGAffineTransform(rotationAngle: 0.0)
-        }
+//        if self.foldingAnimations.contains(.menuButtonRotate) == true {
+//            UIView.animate(withDuration: 0.0618 * 3, delay: 0.0618 * 2, options: .curveEaseIn, animations: { () -> Void in
+//                self.menuButton.transform = CGAffineTransform(rotationAngle: 0.0)
+//                self.menuButton.setImage(self.menuButtonImage, for: .normal)
+//                self.menuButton.setImage(self.menuButtonHighlightedImage, for: .highlighted)
+//                }, completion: nil)
+//        } else {
+//            self.menuButton.transform = CGAffineTransform(rotationAngle: 0.0)
+//        }
         
         UIView.animate(withDuration: 0.15, delay: 0.35, options: .curveLinear, animations: { () -> Void in
             self.bottomView.alpha = 0.0
@@ -467,13 +467,13 @@ open class ExpandingMenuButton: UIView, UIGestureRecognizerDelegate {
         // 4. Excute the center button rotation animation
         //
         if self.expandingAnimations.contains(.menuButtonRotate) == true {
-            UIView.animate(withDuration: 0.1575, animations: { () -> Void in
-                self.menuButton.transform = CGAffineTransform(rotationAngle: CGFloat(-0.5 * Float.pi))
-                self.menuButton.setImage(self.menuButtonRotatedImage, for: .normal)
-                self.menuButton.setImage(self.menuButtonRotatedHighlightedImage, for: .highlighted)
-            })
+//            UIView.animate(withDuration: 0.1575, animations: { () -> Void in
+////                self.menuButton.transform = CGAffineTransform(rotationAngle: CGFloat(-0.5 * Float.pi))
+//                self.menuButton.setImage(self.menuButtonRotatedImage, for: .normal)
+//                self.menuButton.setImage(self.menuButtonRotatedHighlightedImage, for: .highlighted)
+//            })
         } else {
-            self.menuButton.transform = CGAffineTransform(rotationAngle: CGFloat(-0.5 * Float.pi))
+//            self.menuButton.transform = CGAffineTransform(rotationAngle: CGFloat(-0.5 * Float.pi))
         }
         
         // 5. Excute the expanding animation
