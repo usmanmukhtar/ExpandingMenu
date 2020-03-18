@@ -469,8 +469,8 @@ open class ExpandingMenuButton: UIView, UIGestureRecognizerDelegate {
         if self.expandingAnimations.contains(.menuButtonRotate) == true {
 //            UIView.animate(withDuration: 0.1575, animations: { () -> Void in
 ////                self.menuButton.transform = CGAffineTransform(rotationAngle: CGFloat(-0.5 * Float.pi))
-//                self.menuButton.setImage(self.menuButtonRotatedImage, for: .normal)
-//                self.menuButton.setImage(self.menuButtonRotatedHighlightedImage, for: .highlighted)
+                self.menuButton.setImage(self.menuButtonRotatedImage, for: .normal)
+                self.menuButton.setImage(self.menuButtonRotatedHighlightedImage, for: .highlighted)
 //            })
         } else {
 //            self.menuButton.transform = CGAffineTransform(rotationAngle: CGFloat(-0.5 * Float.pi))
