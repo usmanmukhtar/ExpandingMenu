@@ -330,13 +330,14 @@ open class ExpandingMenuButton: UIView, UIGestureRecognizerDelegate {
     }
     
     fileprivate func resizeToFoldedFrame(completion: (() -> Void)?) {
-//        if self.foldingAnimations.contains(.menuButtonRotate) == true {
+        if self.foldingAnimations.contains(.menuButtonRotate) == true {
 //            UIView.animate(withDuration: 0.0618 * 3, delay: 0.0618 * 2, options: .curveEaseIn, animations: { () -> Void in
 //                self.menuButton.transform = CGAffineTransform(rotationAngle: 0.0)
                 self.menuButton.setImage(self.menuButtonImage, for: .normal)
                 self.menuButton.setImage(self.menuButtonHighlightedImage, for: .highlighted)
 //                }, completion: nil)
-//        } else {
+        }
+//        else {
 //            self.menuButton.transform = CGAffineTransform(rotationAngle: 0.0)
 //        }
         
