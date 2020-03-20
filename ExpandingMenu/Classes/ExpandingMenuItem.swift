@@ -29,7 +29,7 @@ open class ExpandingMenuItem: UIView {
         }
     }
     
-    @objc open var titleMargin: CGFloat = 5.0
+    @objc open var titleMargin: CGFloat = 10.0
     
     #if swift(>=4.2)
     @objc open var titleColor: UIColor? {
