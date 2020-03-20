@@ -522,7 +522,7 @@ open class ExpandingMenuButton: UIView, UIGestureRecognizerDelegate {
                 
                 switch self.menuTitleDirection {
                 case .left:
-                    originX = endPoint.x - titleButton.bounds.width
+                    originX = endPoint.x + item.bounds.width / 2.0 + titleButton.bounds.width
                 case .right:
                     originX = endPoint.x + item.bounds.width / 2.0 + margin;
                 }
